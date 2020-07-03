@@ -44,9 +44,9 @@ echo "DONE....."
 
 echo "ADDING TOMCAT....."
 # ADDING TOMCAT
-wget http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.53/bin/apache-tomcat-8.5.53.tar.gz -O /tmp/apache-tomcat-8.5.53.tar.gz >/dev/null 2>&1
-tar xfvz /tmp/apache-tomcat-8.5.53.tar.gz --strip-components=1 --directory /home/vagrant/jenkins-training/tomcat >/dev/null 2>&1
-rm -f /tmp/apache-tomcat-8.5.53.tar.gz
+wget https://github.com/khozema-nullwala/just-enough-jenkins/raw/master/tomcat.tar.gz -O /tmp/tomcat.tar.gz >/dev/null 2>&1
+tar xfvz /tmp/tomcat.tar.gz --strip-components=1 --directory /home/vagrant/jenkins-training/tomcat >/dev/null 2>&1
+rm -f /tmp/tomcat.tar.gz
 echo "DONE....."
 
 echo "ADDING SONARQUBE....."
@@ -94,6 +94,7 @@ unzip chromedriver_linux64.zip >/dev/null 2>&1
 mv chromedriver /usr/bin/chromedriver
 chmod +x /usr/bin/chromedriver
 chown vagrant:vagrant /usr/bin/chromedriver
+rm -f chromedriver_linux64.zip
 echo "DONE......"
  
 # CHANGING THE OWNERSHIP OF JENKINS-TRAINING DIRECTORY
